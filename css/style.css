@@ -97,7 +97,7 @@ h2 {
     margin: 1rem 0;
 }
 
-.video-index {
+.video {
     width: 560px;
     height: 315px;
 }
@@ -366,6 +366,10 @@ h2 {
     color: #efefef;
 }
 
+.video-ig img{
+    width: 30%;
+}
+
 /* footer */
 footer {
     background-color: black;
@@ -420,7 +424,7 @@ footer p {
         height: 50vh;
     }
 
-    .video-index {
+    .video {
         width: 70%;
         height: 70%;
     }
@@ -492,6 +496,10 @@ footer p {
 
     .olam-info{
         width: 100%;
+    }
+
+    .video-ig img{
+        width: 50%;
     }
 
 }
