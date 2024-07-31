@@ -36,28 +36,28 @@ h2 {
     background-size: cover;
 }
 
-.header-musica{
+.header-musica {
     height: 100vh;
     background-image: url(../assets/img/hero-musica.jpg);
     background-position: center top;
     background-size: cover;
 }
 
-.header-bio{
+.header-bio {
     height: 100vh;
     background-image: url(../assets/img/hero-biografia.jpg);
     background-position: center top;
     background-size: cover;
 }
 
-.header-olam{
+.header-olam {
     height: 100vh;
     background-image: url(../assets/img/hero-olam.png);
     background-position: center top;
     background-size: cover;
 }
 
-.header-zomoz{
+.header-zomoz {
     height: 100vh;
     background-image: url(../assets/img/hero-zomoz.jpg);
     background-position: center top;
@@ -65,27 +65,36 @@ h2 {
 }
 
 .nav {
-    display: flex;
-    justify-content: space-between;
     padding: 15px;
-    position: fixed;
-    z-index: 10;
-    width: 100%;
     background-color: rgba(41, 40, 35, 0.509);
-}
-
-.nav-list {
-    display: flex;
-    gap: 3rem;
-    align-items: center;
 }
 
 .nav a {
     color: #efefef;
 }
 
-.logo-nav {
-    font-size: 2rem;
+.navbar-toggler {
+    color: transparent;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.offcanvas {
+    bottom: auto;
+    color: #efefef;
+    background-color: rgba(41, 40, 35, 0.509);
+}
+
+.offcanvas-header{
+    flex-direction: row-reverse;
+    background-color: rgba(41, 40, 35);
+    justify-content: space-between;
+    height: 4.6875rem;
+}
+
+.btn-close{
+    color: #efefef;
+    background-color: #efefef;
 }
 
 
@@ -261,16 +270,16 @@ h2 {
 }
 
 /* musica */
-.title{
+.title {
     text-align: center;
 }
 
-.music{
+.music {
     padding: 1rem 5rem;
 }
 
 /* biografia */
-.bio-1{
+.bio-1 {
     grid-area: b1;
     display: flex;
     justify-content: center;
@@ -279,7 +288,7 @@ h2 {
     padding-bottom: 1rem;
 }
 
-.bio-2{
+.bio-2 {
     grid-area: b2;
     display: flex;
     justify-content: center;
@@ -288,48 +297,48 @@ h2 {
     padding-bottom: 1rem;
 }
 
-.bio-p{
+.bio-p {
     width: 50%;
 }
 
-.bio-img{
+.bio-img {
     width: 30%;
 }
 
-.bio-img img{
+.bio-img img {
     width: 100%;
 }
 
-.bio-3{
+.bio-3 {
     position: relative;
 }
 
-.bio-3 img{
+.bio-3 img {
     width: 100%;
 }
 
-.bio-absolute{
+.bio-absolute {
     position: absolute;
     width: 40%;
     top: 20%;
     left: 15%;
 }
 
-.quote-name{
+.quote-name {
     font-weight: bold;
     padding-top: 0.5rem;
 }
 
-.bio{
+.bio {
     display: grid;
-    grid-template-areas: 
-    "b1 b1"
-    "b2 b2";
+    grid-template-areas:
+        "b1 b1"
+        "b2 b2";
     padding: 0 4rem;
 }
 
 /* olam */
-.olam-info{
+.olam-info {
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -337,7 +346,7 @@ h2 {
     padding: 1rem;
 }
 
-.malo{
+.malo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -348,25 +357,25 @@ h2 {
     font-weight: bold;
 }
 
-.escucha-olam{
+.escucha-olam {
     background-color: black;
     color: #efefef;
     text-align: center;
     padding: 1rem 0;
 }
 
-.olam-acustico{
+.olam-acustico {
     text-align: center;
     margin: 1rem 0;
 }
 
 /* zomoz */
-.escucha-zomoz{
+.escucha-zomoz {
     background-color: black;
     color: #efefef;
 }
 
-.video-ig img{
+.video-ig img {
     width: 30%;
 }
 
@@ -392,9 +401,29 @@ footer p {
     border-bottom: 1px solid black;
 }
 
+.nav-link:hover,
+.nav-link:focus {
+    color: #efefef;
+    font-weight: 600;
+}
+
+.active {
+    border-bottom: 1px solid #efefef;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: #efefef;
+}
+
 
 /* media queries */
 @media (max-width: 768px) {
+    .video {
+        width: 70%;
+        height: 70%;
+    }
+
     .header-olam {
         height: 50vh;
     }
@@ -403,15 +432,15 @@ footer p {
         width: 80%;
     }
 
-    .bio-p{
+    .bio-p {
         width: 80%;
     }
-    
-    .bio-img{
+
+    .bio-img {
         width: 60%;
     }
 
-    .bio-absolute{
+    .bio-absolute {
         font-size: 10px;
         width: 50%;
         top: 15%;
@@ -420,7 +449,12 @@ footer p {
 }
 
 @media (max-width: 426px) {
-    .header-index, .header-musica, .header-bio, .header-olam, .header-zomoz {
+
+    .header-index,
+    .header-musica,
+    .header-bio,
+    .header-olam,
+    .header-zomoz {
         height: 50vh;
     }
 
@@ -469,36 +503,36 @@ footer p {
         justify-self: center;
     }
 
-    .bio-1{
+    .bio-1 {
         flex-direction: column;
     }
 
-    .bio-2{
+    .bio-2 {
         flex-direction: column-reverse;
     }
 
-    .bio{
-        grid-template-areas: 
-        "b1"
-        "b2";
+    .bio {
+        grid-template-areas:
+            "b1"
+            "b2";
     }
 
-    .bio-absolute{
+    .bio-absolute {
         font-size: 8px;
         width: 60%;
         top: 20%;
         left: 5%;
     }
 
-    .malo{
+    .malo {
         font-size: 3rem;
     }
 
-    .olam-info{
+    .olam-info {
         width: 100%;
     }
 
-    .video-ig img{
+    .video-ig img {
         width: 50%;
     }
 

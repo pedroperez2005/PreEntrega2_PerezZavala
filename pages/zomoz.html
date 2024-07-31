@@ -14,15 +14,51 @@
 <body>
 
     <header class="header-zomoz">
-        <nav class="nav">
-            <a href="../index.html" class="logo-nav">Dariana</a>
-            <ul class="nav-list">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./musica.html">Música</a></li>
-                <li><a href="./biografia.html">Biografía</a></li>
-                <li><a href="./olam.html">Olam</a></li>
-                <li><a href="#">Zomoz</a></li>
-            </ul>
+        <nav class="navbar nav fixed-top navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand fs-3" href="../index.html">Dariana</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-deep" width="28"
+                        height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#efefef" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 6h16" />
+                        <path d="M7 12h13" />
+                        <path d="M10 18h10" />
+                    </svg>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <div>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div>
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Dariana</h5>
+                        </div>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./musica.html">Música</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./biografia.html">Biografía</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./olam.html">Olam</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Zomoz</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
 
